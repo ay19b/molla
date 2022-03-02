@@ -20,7 +20,7 @@ const Data=[
         img:'https://www.irishtimes.com/polopoly_fs/1.3937927.1561537947!/image/image.jpg_gen/derivatives/ratio_1x1_w1200/image.jpg',
         header:"Excellent sound",
         comnt:"Dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet",
-		drc:'fade-right'
+		drc:'fade-down'
         
     },
     {
@@ -35,7 +35,7 @@ const Data=[
         img:'https://images.gr-assets.com/authors/1567767601p8/19527915.jpg',
         header:"5 stars indeed.",
         comnt:"Dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet",
-		drc:'fade-left'
+		drc:'fade-down'
     },
 ];
 const useStyles = makeStyles((theme) => ({
