@@ -9,6 +9,9 @@ import {Grid,Typography,Container,makeStyles,Divider} from '@material-ui/core'
 
 
 const useStyles = makeStyles((theme) => ({
+	collection:{
+		backgroundColor: 'black',
+	},
     allColl:{
        padding:'3% 0%'
     },
@@ -35,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 const Collection=()=> {
     const classes = useStyles();
     return (
-        <section>
+        <section className={classes.collection}>
           <Container>
             <Grid container spacing={2} className={classes.allColl}>
               <Grid item  xs={6} sm={3} className={classes.coll}>

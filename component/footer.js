@@ -10,6 +10,9 @@ import {AiFillYoutube} from 'react-icons/ai'
 
 
 const useStyles = makeStyles((theme) => ({
+	footer:{
+		backgroundColor: 'black',
+	},
     icons:{
 		display: 'flex',
         alignItems: 'center',
@@ -38,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	item:{
 		marginBottom: '2%',
+		color: '#bbb',
 	},
 	lastFooter:{
 		textAlign: 'center',
