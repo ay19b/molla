@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: 'black',
 	},
     allColl:{
-       padding:'3% 0%'
+       padding:'2% 0% 0% 0%',
+       display: 'flex',
     },
 	coll:{
 		textAlign:'center',
@@ -25,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
     },
     icon:{
-      fontSize:'2.3rem',
       color:'white',
     },
     divDisc:{
@@ -43,7 +43,7 @@ const Collection=()=> {
             <Grid container spacing={2} className={classes.allColl}>
               <Grid item  xs={6} sm={3} className={classes.coll}>
                 <div className={classes.divIcon}>
-                   <MdPayment className={classes.icon}/>
+                   <Typography variant="h3"><MdPayment className={classes.icon}/></Typography>  
                 </div>
                 <div className={classes.divDisc}>
                   <Typography variant="subtitle1" style={{color:"white"}}>Payment & delivery</Typography>  
@@ -53,7 +53,7 @@ const Collection=()=> {
               </Grid>
               <Grid item  xs={6} sm={3} className={classes.coll}>
                 <div className={classes.divIcon}>
-                  <GiReturnArrow className={classes.icon}/>
+                <Typography variant="h3"><GiReturnArrow className={classes.icon}/></Typography>  
                 </div>
                 <div className={classes.divDisc}>
                   <Typography variant="subtitle1"style={{color:"white"}}>Return & refund</Typography>  
@@ -62,7 +62,7 @@ const Collection=()=> {
               </Grid>
               <Grid item  xs={6} sm={3} className={classes.coll}>
                 <div className={classes.divIcon}>
-                  <ImEqualizer2 className={classes.icon}/>
+                <Typography variant="h3"><ImEqualizer2 className={classes.icon}/></Typography>  
                 </div>
                 <div className={classes.divDisc}>
                   <Typography variant="subtitle1"style={{color:"white"}}>Quallity Support</Typography>  
@@ -71,7 +71,7 @@ const Collection=()=> {
               </Grid>
               <Grid item  xs={6} sm={3} className={classes.coll}>
                 <div className={classes.divIcon}>
-                  <FaRegEnvelopeOpen className={classes.icon}/>
+                <Typography variant="h3"><FaRegEnvelopeOpen className={classes.icon}/></Typography>  
                 </div>
                 <div className={classes.divDisc}>
                   <Typography variant="subtitle1"style={{color:"white"}}>Join Our Newsletter</Typography>  
