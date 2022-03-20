@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 	btnAdd:{
 		borderRadius:'13px',
 		padding:'0.5rem 1.7rem',
-        boxShadow: '0px 4px 7px -2px rgba(0,0,0,0.75)',
+        boxShadow: '0px 1px 5px -2px rgba(0,0,0,0.75)',
 	},
 }));
 const Products =()=>{
@@ -101,9 +101,7 @@ const Products =()=>{
 					   <div className={classes.infProd}>
 					     <Typography style={{color:'#9a9a9a'}} >Lorem ipsum dolor sit amet, consectetue elit. Donec odio. Quisque volutpat mattis eros. </Typography>
 					     <Typography variant="h5" color='primary' style={{fontWeight:'bold',width: '100%'}}>${price}</Typography>
-						 
-                         <Button variant="contained" color='primary' className={classes.btnAdd} startIcon={<HiOutlineShoppingCart />} onClick={handleClick(item,{vertical: 'top',horizontal: 'right',})}>add to card</Button>
-						 
+						 <Button variant="contained" color='primary' className={classes.btnAdd} startIcon={<HiOutlineShoppingCart />} onClick={handleClick(item,{vertical: 'top',horizontal: 'right',})}>add to card</Button>
 					   </div>
                      </div>
                   </div>
