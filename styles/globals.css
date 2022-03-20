@@ -21,22 +21,27 @@ a {
 .awssld {
     width: 60% !important;
     margin: auto !important;
-	height:100vh !important;
+	  height: 100vh !important;
 }
+.awssld {
+  --organic-arrow-thickness: 3px !important;
+  --organic-arrow-height: 25px !important;
+}
+
 .awssld__wrapper {
     margin-top: 2%;
     margin-bottom: 15%;
 	height: 100vh;
 }
 .awssld__bullets{
-	bottom: 28% !important;
+	bottom: 10rem !important;
 	z-index:3;
 }
 .awssld__bullets button{
 	background: #d9d8d8 !important;
 }
 .awssld__bullets .awssld__bullets--active {
-  background: #66f !important;
+  background: #5e5e86 !important;
 }
 .awssld__controls {
   visibility: visible !important;

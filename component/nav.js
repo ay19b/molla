@@ -28,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor:'black',
       position:"relative"
     },
+    container:{
+      backgroundColor:'black',
+    },
 	conNav:{
 	   alignItems: 'center',
 	},
@@ -42,7 +45,8 @@ const useStyles = makeStyles((theme) => ({
       color:'white',
       boxShodow:'none',
       width: '100%',
-	  animationName: '$scroll',
+      backgroundColor:'black',
+	    animationName: '$scroll',
       animationDuration: '.4s',
     },
 	'@keyframes scroll':{
@@ -62,8 +66,8 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       zIndex:'10',
       padding:'5px',
-	  top:'0%',
-	  animationName: '$scrollNav',
+	    top:'0%',
+	    animationName: '$scrollNav',
       animationDuration: '.4s',
 	  [theme.breakpoints.down("sm")]: {
         padding:'2%'
@@ -279,7 +283,7 @@ const useStyles = makeStyles((theme) => ({
       }
     },
 }));
-const Nav=()=> {
+const Nav=({basket})=> {
   const [navbar, setNavbar] = useState(false);
   const [showLinks, setShowLinks] = useState(true);
   const [open, setOpen] = useState(false);
@@ -321,7 +325,7 @@ useEffect(() => {
     return (
       
         <navbar  className={!navbar?classes.nav:classes.navActive} >
-         <Container>
+         <Container  className={!basket?classes.container:null}>
           <Grid container className={navbar?classes.conNav:classes.conNavBreak}>
           <Grid item xs={6} md={2} className={classes.logo}>
              <CgMenu className={classes.menu} onClick={toggleLinks} size={25}/>

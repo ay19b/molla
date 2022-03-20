@@ -90,7 +90,7 @@ const Navbar=()=> {
 	
     return (
       <section className={classes.home}>
-        <Nav />
+        <Nav basket='false'/>
 
         <Box className={classes.box} data-aos="fade-right" data-aos-once="true">
 		 <Container>

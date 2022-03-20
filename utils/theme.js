@@ -46,6 +46,12 @@ export const theme = createTheme({
 		root:{
 			backgroundColor:'#66f',
 		},
-	}
-  }
+	},
+  MuiAvatar:{
+    root:{
+      width: '90px',
+      height: '90px',
+    },
+  },
+  },
 });

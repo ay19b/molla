@@ -74,9 +74,10 @@ const useStyles = makeStyles((theme) => ({
         top: '10%',
 	},
 	inf:{
-		padding:'5% 4% 8% 4%',
-		border: '1px solid #ccc',
-		borderRadius:'8px'
+		border: '1px solid #f2eeee',
+        padding: '13% 7% 13% 7%',
+        borderRadius: '8px',
+		boxShadow: '4px 8px 15px -16px rgba(0,0,0,0.76)',
 	},
 	rate:{
 		marginTop:'3%',
@@ -119,7 +120,8 @@ const Reviews =()=>{
 					     <MdStar className={classes.star}/><MdStar className={classes.star}/><MdStar className={classes.star}/>
 					   </div>
                        <Typography variant="h5" style={{color:'black',fontWeight:'bold'}}>{header}</Typography>
-                       <Typography variant="body1">{comnt}</Typography>
+                       <Typography variant="body1" gutterBottom>{comnt}</Typography>
+					   <Typography variant="h6" style={{fontWeight:'bold'}}>Sakina Stout</Typography>
                      </div>
 					</Grid>
 					

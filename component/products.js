@@ -25,8 +25,9 @@ const useStyles = makeStyles((theme) => ({
 		flexDirection: 'column',
 		backgroundColor:"white",
 		textAlign:'center',
-		height:'100%',
+		height:'100vh',
 		padding:'4% 0',
+		margin:'6rem 0% 5rem 0%',
 	},
 	slide:{
 		display: 'flex',
@@ -40,17 +41,18 @@ const useStyles = makeStyles((theme) => ({
 		height:'100%',
 	},
 	disc:{
-		paddingTop: '15%',
+		paddingTop: '5%',
 	},
 	infProd:{
 		display:'flex',
 		flexWrap:'wrap',
 		justifyContent: 'center',
-		margin:'4% 0',
+		margin:'1% 0',
 	},
 	btnAdd:{
 		borderRadius:'13px',
-		padding:'0.4rem 1.5rem',
+		padding:'0.5rem 1.7rem',
+        boxShadow: '0px 4px 7px -2px rgba(0,0,0,0.75)',
 	},
 }));
 const Products =()=>{
@@ -95,9 +97,11 @@ const Products =()=>{
                   <div key={id} className={classes.slide}>
                      <Image src={img} className={classes.img} width='300' height='350' loading="eager"/>
                      <div className={classes.disc}>
-                       <Typography variant="h4" style={{color:'black'}}>{hdr}</Typography>
+                       
 					   <div className={classes.infProd}>
-					     <Typography variant="h5" color='primary' style={{fontWeight:'bold',marginRight:'3%'}}>${price}</Typography>
+					     <Typography style={{color:'#9a9a9a'}} >Lorem ipsum dolor sit amet, consectetue elit. Donec odio. Quisque volutpat mattis eros. </Typography>
+					     <Typography variant="h5" color='primary' style={{fontWeight:'bold',width: '100%'}}>${price}</Typography>
+						 
                          <Button variant="contained" color='primary' className={classes.btnAdd} startIcon={<HiOutlineShoppingCart />} onClick={handleClick(item,{vertical: 'top',horizontal: 'right',})}>add to card</Button>
 						 
 					   </div>

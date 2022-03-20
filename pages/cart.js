@@ -191,7 +191,7 @@ const Cart =()=>{
   if(cartProducts.length==0){
       return(
 	  <section>
-	   <Nav />
+	   <Nav basket='true'/>
 	   
 	   <div className={classes.headerCart}>
 	    <Typography variant="h3">Shopping Cart</Typography>
