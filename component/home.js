@@ -29,18 +29,21 @@ const useStyles = makeStyles((theme) => ({
       backgroundRepeat: "no-repeat",
       backgroundPosition: 'center',
       backgroundSize:'cover',
-      minHeight:'100vh',
+      height:'100vh',
     },
     box:{
       position: "absolute",
-      top: "30%",
-      marginLeft:"15%",
+      top: "12rem",
+      marginLeft:"8rem",
       width: "27rem",
       color: "white",
       fontWeight:'bold',
+      [theme.breakpoints.down("sm")]: {
+        marginLeft:"4rem",
+      },
 	  [theme.breakpoints.down("xs")]: {
         marginLeft:"2%",
-		width: "100%",
+        width:'100%',
       },
     },
 	
@@ -54,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: '20px',
       padding: '4% 8%',
       marginRight:'2%',
-	  border: '1px solid transparent',
+	    border: '1px solid transparent',
       width: '12rem',
       '&:hover':{
         backgroundColor:'#0000fb'
@@ -92,8 +95,9 @@ const Navbar=()=> {
       <section className={classes.home}>
         <Nav basket='false'/>
 
-        <Box className={classes.box} data-aos="fade-right" data-aos-once="true">
-		 <Container>
+        
+		   <Container>
+       <Box className={classes.box} data-aos="fade-right" data-aos-once="true">
           <Typography variant="h4" style={{fontWeight:'bold'}}>Hear it First</Typography>
           <Typography variant="h2" style={{fontWeight:'bold'}} >Control Your Sound</Typography>
           <Typography variant="body1" gutterBottom>Featuring Active Noise Cancelling
@@ -108,8 +112,9 @@ const Navbar=()=> {
 			    <Button className={classes.addDsc}>Discover Now</Button>
 			 </Grid>
 		  </Grid>
+      </Box>
 		 </Container>  
-        </Box>
+        
       </section> 
       
     )

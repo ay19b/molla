@@ -60,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight:'bold',
 		[theme.breakpoints.down("xs")]: {
            marginLeft:"4%",
+           width: "100%",
         },
     },
     AllBtn:{
@@ -70,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         textAlign: "center",
         border: '1px dashed',
-        padding: '3%',
+        padding: '0.8rem',
         borderRadius: '8px',
         marginRight: '6%',
 		width: '6rem',
@@ -87,7 +88,8 @@ const Feature=()=> {
 	  Aos.init({duration:2000});
   },[]);
     return (
-        <section style={{backgroundColor:'#f1f1f1'}}>
+        <section style={{backgroundColor:'#f1f1f1',height:'100%',}}>
+        
            <div className={classes.feature} >
             <Container>
                 <Grid container spacing={5} >
@@ -143,7 +145,7 @@ const Feature=()=> {
           <div className={classes.extraHead}>
           <Box className={classes.box} data-aos="fade-right" data-aos-once="true">
           <Typography variant="h4" style={{fontWeight:'bold',color:"black"}}>Listen all day</Typography>
-          <Typography variant="h2" style={{fontWeight:'bold',color:"black"}}>20 + Hours of Playtime</Typography>
+          <Typography variant="h2" style={{fontWeight:'bold',color:"black",width: '100%'}}>20 + Hours of Playtime</Typography>
           <Typography variant="subtitle1" gutterBottom style={{color:"#828080"}}>Donec nec justo eget felis facilisis fermentum. Aliquam 
             porttitor mauris sit amet orci. Aenean dignissim
             pellentesque felis. 
@@ -162,6 +164,7 @@ const Feature=()=> {
           </div>
         </Box>
           </div>
+           
         </section>
     )
 }

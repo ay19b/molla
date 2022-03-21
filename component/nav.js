@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React,{useState,useEffect} from 'react'
 import Logo from '../public/images/logo.png'
 import {BiSearchAlt2} from 'react-icons/bi'
-import {CgMenu} from 'react-icons/cg'
+import {CgMenu,CgClose} from 'react-icons/cg'
 import {HiOutlineShoppingCart,HiMenu} from 'react-icons/hi'
 import {MdKeyboardArrowDown,MdOutlineCancel} from 'react-icons/md'
 import {FiInstagram} from 'react-icons/fi'
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
 	    animationName: '$scrollNav',
       animationDuration: '.4s',
 	  [theme.breakpoints.down("sm")]: {
-        padding:'2%'
+        padding:'3% 1%',
       },
     },
 	'@keyframes scrollNav':{
@@ -96,21 +96,21 @@ const useStyles = makeStyles((theme) => ({
       fontSize:"0.9rem",
       [theme.breakpoints.down("sm")]:{
         flexDirection:'column',
-		display:'flex',
-		listStyle:'none',
-		position:'absolute',
-		left:'0',
-		top: '-14px',
-		textAlign:'center',
-		backgroundColor:'#333',
-		alignItems: 'flex-start',
-		width: '18rem',
-		height:'100vh',
-		zIndex: '10',
-		transform: 'translateX(-100%)',
-		transition: 'transform 0.5s ease-in',
-		animationName: '$animate',
-         animationDuration: '4s',
+		    display:'flex',
+		    listStyle:'none',
+		    position:'absolute',
+		    left:'0',
+		    top: '-14px',
+		    textAlign:'center',
+		    backgroundColor:'#333',
+		    alignItems: 'flex-start',
+		    width: '100%',
+		    height:'100vh',
+		    zIndex: '10',
+		    transform: 'translateX(-100%)',
+		    transition: 'transform 0.5s ease-in',
+		    animationName: '$animate',
+        animationDuration: '4s',
       },
     },
 	active:{
@@ -148,7 +148,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
 	},
 	iconSocail:{
-		width: '40px',
+		    width: '40px',
         height: '40px',
         borderRadius: '50%',
         display: 'flex',
@@ -156,9 +156,9 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         marginRight: '3%',
         cursor: 'pointer',
-		'&:hover':{
+		    '&:hover':{
          color:'black',
-		 backgroundColor:'white'
+		     backgroundColor:'white'
         }
 	},
     linksNav:{
@@ -206,8 +206,22 @@ const useStyles = makeStyles((theme) => ({
 	},
 	iconCancel:{
 		position: 'absolute',
-        right: '0px',
+    right: '0px',
 	},
+  close:{
+    display:'none',
+    width: '100%',
+    position: 'relative',
+    cursor:'pointer',
+    marginBottom: '6%',
+    [theme.breakpoints.down("sm")]: {
+      display:'block',
+    },
+  },
+  iconClose:{
+    position: 'absolute',
+    right: '18.5%',
+  },
     listItem:{
       cursor:'pointer',
       display:'flex',
@@ -220,7 +234,7 @@ const useStyles = makeStyles((theme) => ({
       },
 	  [theme.breakpoints.down("sm")]: {
         marginBottom: '2%',
-		width: '90%',
+		    width: '90%',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -268,9 +282,9 @@ const useStyles = makeStyles((theme) => ({
 	},
 	searchSctn:{
 		display: 'flex',
-        justifyContent: 'center',
+    justifyContent: 'center',
 	},
-    addDsc:{
+  addDsc:{
       backgroundColor:'transparent',
       color:'white',
       border:'1px solid white',
@@ -332,15 +346,15 @@ useEffect(() => {
                <Image src={Logo} />
           </Grid> 
           <Grid item xs={0} md={7}>
-            <ul className={showLinks?classes.list:classNames(classes.list, classes.active)} onMouseLeave={toggleLinks}>
-			
-              <li className={classes.listItem}><Typography variant='button'className={classes.listItem} >HOME<MdKeyboardArrowDown size={20}/></Typography> </li>
-			  <li className={classes.listItem}><Typography variant='button'className={classes.listItem} >SHOP<MdKeyboardArrowDown size={20}/></Typography> </li>
-			  <li className={classes.listItem}><Typography variant='button'className={classes.listItem} >PRODUCT<MdKeyboardArrowDown size={20}/></Typography> </li>
-			  <li className={classes.listItem}><Typography variant='button'className={classes.listItem} >PAGES <MdKeyboardArrowDown size={20}/></Typography> </li>
-			  <li className={classes.listItem}><Typography variant='button'className={classes.listItem} >BLOG <MdKeyboardArrowDown size={20}/></Typography> </li>
-			  <li className={classes.listItem}><Typography variant='button'className={classes.listItem} >ELEMENT <MdKeyboardArrowDown size={20}/></Typography> </li>
-			   <li className={classes.itemSocial}>
+            <ul className={showLinks?classes.list:classNames(classes.list, classes.active)} >
+			        <Typography variant="h4" className={classes.close}><CgClose onClick={toggleLinks} className={classes.iconClose}/></Typography>
+              <li className={classes.listItem} onClick={toggleLinks}><Typography variant='button'className={classes.listItem} >HOME<MdKeyboardArrowDown size={20}/></Typography> </li>
+			        <li className={classes.listItem} onClick={toggleLinks}><Typography variant='button'className={classes.listItem} >SHOP<MdKeyboardArrowDown size={20}/></Typography> </li>
+		      	  <li className={classes.listItem} onClick={toggleLinks}><Typography variant='button'className={classes.listItem} >PRODUCT<MdKeyboardArrowDown size={20}/></Typography> </li>
+			        <li className={classes.listItem} onClick={toggleLinks}><Typography variant='button'className={classes.listItem} >PAGES <MdKeyboardArrowDown size={20}/></Typography> </li>
+			        <li className={classes.listItem} onClick={toggleLinks}><Typography variant='button'className={classes.listItem} >BLOG <MdKeyboardArrowDown size={20}/></Typography> </li>
+			        <li className={classes.listItem} onClick={toggleLinks}><Typography variant='button'className={classes.listItem} >ELEMENT <MdKeyboardArrowDown size={20}/></Typography> </li>
+			        <li className={classes.itemSocial}>
 					     <div className={classes.iconsSocail} >
                           <div className={classes.iconSocail}>
                              <BsTwitter size={20}/>
@@ -351,7 +365,7 @@ useEffect(() => {
                           <div className={classes.iconSocail}>
                              <FiInstagram size={20}/>
                           </div>
-						  <div className={classes.iconSocail}>
+						              <div className={classes.iconSocail}>
                              <AiFillYoutube size={20}/>
                           </div>
                           
