@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         top: '10%',
 	},
 	inf:{
-		border: '1px solid #f2eeee',
+		border: '1px solid #ccc6c6',
         padding: '13% 7% 13% 7%',
         borderRadius: '8px',
 		boxShadow: '4px 8px 15px -16px rgba(0,0,0,0.76)',

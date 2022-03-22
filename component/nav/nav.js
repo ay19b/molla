@@ -98,7 +98,7 @@ useEffect(() => {
 		 <Grid item xs={1} md={2} className={classes.searchSctn}>
 		  <BiSearchAlt2 className={classes.icon}/>
 		 </Grid>
-          <Grid item xs={5} md={2} className={classes.linkToCart} onMouseUp={toggle} >
+          <Grid item xs={5} md={1} className={classes.linkToCart} onMouseUp={toggle} >
               <Badge badgeContent={cartProducts.length} color="primary" className={classes.icon}>
                 <HiOutlineShoppingCart color="action" />
                </Badge>
