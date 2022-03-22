@@ -1,60 +1,20 @@
 import React,{useState,useEffect} from 'react'
-import { makeStyles,Typography, Container,Snackbar,Button} from '@material-ui/core'
+import {Typography, Container,Snackbar,Button} from '@material-ui/core'
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 import Image from 'next/image';
-import {HiOutlineShoppingCart,HiMenu} from 'react-icons/hi'
+import {HiOutlineShoppingCart} from 'react-icons/hi'
 import {useDispatch} from 'react-redux'
-import {add} from "../features/productSlice"
+import {add} from "../../features/productSlice"
 import Data from './dataProd'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import useStyles from './style';
 
 
 
 
-
-
-
-const useStyles = makeStyles((theme) => ({
-    products:{
-		display:'flex',
-		justifyContent:'center',
-		alignItems:'center',
-		flexDirection: 'column',
-		backgroundColor:"white",
-		textAlign:'center',
-		height:'100vh',
-		padding:'4% 0',
-		margin:'6rem 0% 5rem 0%',
-	},
-	slide:{
-		display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-		paddingTop:'10%',
-	},
-	img:{
-		width:'100%',
-		height:'100%',
-	},
-	disc:{
-		paddingTop: '5%',
-	},
-	infProd:{
-		display:'flex',
-		flexWrap:'wrap',
-		justifyContent: 'center',
-		margin:'1% 0',
-	},
-	btnAdd:{
-		borderRadius:'13px',
-		padding:'0.5rem 1.7rem',
-        boxShadow: '0px 1px 5px -2px rgba(0,0,0,0.75)',
-	},
-}));
 const Products =()=>{
 	const classes = useStyles();
 	const AutoplaySlider = withAutoplay(AwesomeSlider);

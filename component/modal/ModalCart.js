@@ -1,67 +1,19 @@
 import React,{useState,useEffect} from 'react'
 import {MdOutlineClose} from 'react-icons/md'
-import {AiOutlineShoppingCart} from 'react-icons/ai'
-import {MdSearch,MdKeyboardArrowDown} from 'react-icons/md'
-import { makeStyles,Typography, Container,Snackbar,Button,Grid,Divider,TextField,Card,FormLabel,FormControl,FormControlLabel,RadioGroup,Radio} from '@material-ui/core'
-import AwesomeSlider from 'react-awesome-slider';
-import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import {Typography,Snackbar,Button,Grid,Divider,Card} from '@material-ui/core'
 import 'react-awesome-slider/dist/styles.css';
 import Image from 'next/image';
-import black from '../public/images/black.jpg'
-import red from '../public/images/red.jpg'
-import white from '../public/images/white.jpg'
-import {HiOutlineShoppingCart,HiMenu} from 'react-icons/hi'
 import {useSelector,useDispatch} from 'react-redux';
-import {SelectProduct} from '../features/productSlice'
-import {selectTotalAmount} from "../features/variableSlice"
-import {remove,incrementProduct,decrementProduct} from "../features/productSlice"
-import {setTotalAmount} from "../features/variableSlice"
+import {SelectProduct} from '../../features/productSlice'
+import {selectTotalAmount} from "../../features/variableSlice"
+import {remove} from "../../features/productSlice"
+import {setTotalAmount} from "../../features/variableSlice"
 import NextLink from 'next/link'
-import Head from 'next/head'
-import Footer from '../component/footer'
-import Nav from '../component/nav'
+import useStyles from './style';
 
 
 
 
-const useStyles = makeStyles((theme) => ({
-	closeIconSctn:{
-		display: 'flex',
-        alignItems: 'center',
-	},
-	closeIcon:{
-		cursor:'pointer',
-	},
-    emptyCart:{
-		backgroundColor:'white',
-	},
-	shopingCart:{
-		fontSize:'10rem',
-	},
-	card:{
-		width: '20rem',
-        position: 'absolute',
-        right: '2%',
-		top:'3rem',
-        zIndex: '15',
-		borderRadius: '8px',
-		padding: '1% 2% 1% 2%',
-		display:'block',
-        [theme.breakpoints.down("xs")]: {
-			width: '18rem',
-		 },
-	},
-	cardDisp:{
-		display:'none',
-	},
-	subtotal:{
-		marginBottom: '2%',
-		marginTop: '2%',
-		display: 'flex',
-        justifyContent: 'space-between',
-		color:'#4d4d4d'
-	},
-}));
 const InfCard =({on,onMouseLeave})=>{
 	const classes = useStyles();
 	let totalAmount = useSelector(selectTotalAmount);
@@ -107,10 +59,10 @@ const InfCard =({on,onMouseLeave})=>{
     }, 0);
 	
 	useEffect(() => {
-    dispatch(setTotalAmount(Number(sum).toFixed(2)));
-	console.log(typeof(value))
-	console.log(typeof(totalAmount))
-  }, [sum]);
+      dispatch(setTotalAmount(Number(sum).toFixed(2)));
+	  console.log(typeof(value))
+	  console.log(typeof(totalAmount))
+    }, [sum]);
   
   if(cartProducts.length==0){
       return(
@@ -133,12 +85,6 @@ const InfCard =({on,onMouseLeave})=>{
 			return(
 			
 			 <>
-			 
-			 
-			 
-			 
-			 
-			 
 			 <Grid container item direction="row"  key={prod.id} spacing={1} style={{marginBottom:'2%'}}>
 			   
 			   <Grid item xs={7} >

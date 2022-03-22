@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import Data from '../component/dataProd'
+import Data from '../component/products/dataProd'
 
 
 

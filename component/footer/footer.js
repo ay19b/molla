@@ -1,53 +1,15 @@
 import { makeStyles,Typography, Container,Grid,Link} from '@material-ui/core'
-import black from '../public/images/black.jpg'
+import black from '../../public/images/black.jpg'
 import {FiInstagram} from 'react-icons/fi'
 import {BsTwitter} from 'react-icons/bs'
 import {GrFacebookOption} from 'react-icons/gr'
 import {AiFillYoutube} from 'react-icons/ai'
+import useStyles from './style';
 
 
 
 
 
-const useStyles = makeStyles((theme) => ({
-	footer:{
-		backgroundColor: 'black',
-	},
-    icons:{
-		display: 'flex',
-        alignItems: 'center',
-        marginTop: '8%'
-	},
-	icon:{
-		width: '30px',
-        height: '30px',
-        borderRadius: '50%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginRight: '3%',
-        
-        cursor: 'pointer',
-		'&:hover':{
-         color:black,
-		 backgroundColor:'white'
-        }
-	},
-	headerList:{
-		color:'white',
-	},
-	listItem:{
-		listStyle:'none',
-	},
-	item:{
-		marginBottom: '2%',
-		color: '#bbb',
-	},
-	lastFooter:{
-		textAlign: 'center',
-		marginTop:'1%',
-	}
-}));
 const Footer =()=>{
 	const classes = useStyles();
     return(

@@ -1,33 +1,16 @@
 import React,{useEffect} from 'react';
-import { makeStyles,Typography, Container,Button,Grid,Avatar,Divider} from '@material-ui/core'
+import {Typography, Container,Grid,Divider} from '@material-ui/core'
 import Image from 'next/image';
-import bannerOne from '../public/images/banner-1.jpg'
-import bannerTwo from '../public/images/banner-2.jpg'
-import bannerThree from '../public/images/banner-3.jpg'
+import bannerOne from '../../public/images/banner-1.jpg'
+import bannerTwo from '../../public/images/banner-2.jpg'
+import bannerThree from '../../public/images/banner-3.jpg'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import useStyles from './style';
 
 
 
 
-const useStyles = makeStyles((theme) => ({
-    gallery:{
-		display:'flex',
-		justifyContent:'center',
-		alignItems:'center',
-		flexDirection: 'column',
-		backgroundColor:"white",
-	    padding:'4% 0',
-	},
-	grid:{
-		display: 'flex',
-        flexDirection: 'column',
-		[theme.breakpoints.down("sm")]: {
-           display:'block',
-		   textAlign: 'center',
-        },
-	}
-}));
 const Gallery =()=>{
 	const classes = useStyles();
 	useEffect(()=>{

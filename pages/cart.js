@@ -11,8 +11,8 @@ import {remove,incrementProduct,decrementProduct} from "../features/productSlice
 import {setTotalAmount} from "../features/variableSlice"
 import NextLink from 'next/link'
 import Head from 'next/head'
-import Footer from '../component/footer'
-import Nav from '../component/nav'
+import Footer from '../component/footer/footer'
+import Nav from '../component/nav/nav'
 
 
 

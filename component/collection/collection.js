@@ -1,40 +1,13 @@
 import React from 'react'
-import {GrDeliver} from 'react-icons/gr'
 import {GiReturnArrow} from 'react-icons/gi'
 import {ImEqualizer2} from 'react-icons/im'
 import {FaRegEnvelopeOpen} from 'react-icons/fa'
 import {MdPayment} from 'react-icons/md'
-import {Grid,Typography,Container,makeStyles,Divider} from '@material-ui/core'
+import {Grid,Typography,Container,Divider} from '@material-ui/core'
+import useStyles from './style';
 
 
 
-const useStyles = makeStyles((theme) => ({
-	collection:{
-		backgroundColor: 'black',
-	},
-    allColl:{
-       padding:'2% 0% 0% 0%',
-       display: 'flex',
-    },
-	coll:{
-		textAlign:'center',
-	},
-    divIcon:{
-        flex:'0.3',
-        justifyContent: 'center',
-        alignItems: 'center',
-        display: 'flex',
-    },
-    icon:{
-      color:'white',
-    },
-    divDisc:{
-        flex:'0.7',
-		[theme.breakpoints.down("xs")]: {
-          textAlign:'center',
-        },
-    },
-}));
 const Collection=()=> {
     const classes = useStyles();
     return (
@@ -80,7 +53,7 @@ const Collection=()=> {
               </Grid>
             </Grid>
           </Container>  
-		  <Divider style={{backgroundColor:'#686868'}}/>
+		     <Divider style={{backgroundColor:'#686868'}}/>
         </section>
     )
 }

@@ -1,9 +1,9 @@
 
-import black from '../public/images/black.jpg'
-import red from '../public/images/red.jpg'
-import white from '../public/images/white.jpg'
-import blue from '../public/images/blue.jpg'
-import mix from '../public/images/mixYB.png'
+import black from '../../public/images/black.jpg'
+import red from '../../public/images/red.jpg'
+import white from '../../public/images/white.jpg'
+import blue from '../../public/images/blue.jpg'
+import mix from '../../public/images/mixYB.png'
 
 const Data=[
     {

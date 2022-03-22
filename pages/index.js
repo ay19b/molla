@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import Navbar from '../component/home'
-import Collection from '../component/collection'
+import Navbar from '../component/home/home'
+import Collection from '../component/collection/collection'
 import { theme } from '../utils/theme';
 import {ThemeProvider,responsiveFontSizes} from '@material-ui/core';
-import Feature from '../component/feature'
-import Products from '../component/products'
-import Reviews from '../component/reviews'
-import Gallery from '../component/gallery'
-import Footer from '../component/footer'
+import Feature from '../component/feature/feature'
+import Products from '../component/products/products'
+import Reviews from '../component/reviews/reviews'
+import Gallery from '../component/gallery/gallery'
+import Footer from '../component/footer/footer'
 
 
 
