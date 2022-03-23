@@ -23,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
 	},
 	conNavBreak:{
 	   alignItems: 'center',
-	   padding: '1%',
+	   padding: '10px',
 	   [theme.breakpoints.down("sm")]: {
         paddingTop:'3%'
-      },
+    },
 	},
     nav:{
       color:'white',
@@ -264,10 +264,10 @@ const useStyles = makeStyles((theme) => ({
 		alignItems: 'center',
 		cursor:'pointer',
 		'&:hover':{
-          color:theme.palette.primary.main
-        },
+        color:theme.palette.primary.main
+    },
     [theme.breakpoints.down("sm")]: {
-      justifyContent: 'end',
+      justifyContent: 'end !important',
     },   
 	},
 	searchSctn:{
