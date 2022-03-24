@@ -272,8 +272,9 @@ const useStyles = makeStyles((theme) => ({
 		'&:hover':{
         color:theme.palette.primary.main
     },
-    [theme.breakpoints.down("sm")]: {
-      justifyContent: 'end !important',
+    [theme.breakpoints.down("sm")]:{
+      position: 'absolute',
+      right: '16px',
     },   
 	},
 	searchSctn:{
