@@ -24,6 +24,10 @@ const useStyles = makeStyles((theme) => ({
 	conNavBreak:{
 	   alignItems: 'center',
 	   padding: '16px 0%',
+     [theme.breakpoints.down("sm")]: {
+      display: 'flex',
+      justifyContent: 'space-between',
+    },
 	},
     nav:{
       color:'white',
@@ -275,6 +279,9 @@ const useStyles = makeStyles((theme) => ({
 	searchSctn:{
 		display: 'flex',
     justifyContent: 'center',
+    [theme.breakpoints.down("sm")]: {
+      display: 'none',
+    },
 	},
   addDsc:{
       backgroundColor:'transparent',

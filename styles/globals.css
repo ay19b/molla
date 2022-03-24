@@ -57,11 +57,13 @@ a {
 .MuiButton-root{
 	min-width: 25px !important;
 }
+.MuiButton-text {
+  padding: 10px 12px !important;
+}
 @media only screen and (min-width: 1200px) {
   .awssld__bullets{
 	bottom: 20% !important;
 }
-
 }
 @media only screen and (max-width: 600px) {
   .awssld {
