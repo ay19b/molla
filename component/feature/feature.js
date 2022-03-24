@@ -71,27 +71,29 @@ const Feature=()=> {
             </Container>
           </div>  
           <div className={classes.extraHead}>
-          <Box className={classes.box} data-aos="fade-right" data-aos-once="true">
-          <Typography variant="h4" className={classes.boxItemHeader}>Listen all day</Typography>
-          <Typography variant="h2" className={classes.boxHeader}>20 + Hours of Playtime</Typography>
-          <Typography variant="subtitle1" gutterBottom className={classes.boxParag}>Donec nec justo eget felis facilisis fermentum. Aliquam 
-            porttitor mauris sit amet orci. Aenean dignissim
-            pellentesque felis. 
-          </Typography>
-          <div className={classes.AllBtn}>
-          <div className={classes.btn}>
-              <Typography variant="subtitle1">CHARGE</Typography>
-              <Typography variant="h4">2</Typography>
-              <Typography variant="subtitle1">HOURS</Typography>
-          </div>
-          <div className={classes.btn}>
-              <Typography variant="subtitle1">PLAYTIME</Typography>
-              <Typography variant="h4">20</Typography>
-              <Typography variant="subtitle1">HOURS</Typography>
-          </div>
-          </div>
-        </Box>
-          </div>
+           <Container> 
+             <Box className={classes.box} data-aos="fade-right" data-aos-once="true">
+               <Typography variant="h4" className={classes.boxItemHeader}>Listen all day</Typography>
+               <Typography variant="h2" className={classes.boxHeader}>20 + Hours of Playtime</Typography>
+               <Typography variant="subtitle1" gutterBottom className={classes.boxParag}>Donec nec justo eget felis facilisis fermentum. Aliquam 
+                  porttitor mauris sit amet orci. Aenean dignissim
+                  pellentesque felis. 
+               </Typography>
+               <div className={classes.AllBtn}>
+                  <div className={classes.btn}>
+                   <Typography variant="subtitle1">CHARGE</Typography>
+                   <Typography variant="h4">2</Typography>
+                   <Typography variant="subtitle1">HOURS</Typography>
+                  </div>
+                  <div className={classes.btn}>
+                   <Typography variant="subtitle1">PLAYTIME</Typography>
+                   <Typography variant="h4">20</Typography>
+                   <Typography variant="subtitle1">HOURS</Typography>
+                  </div>
+               </div>
+            </Box>
+          </Container>
+         </div>
            
         </section>
     )

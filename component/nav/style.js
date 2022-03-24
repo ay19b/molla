@@ -23,18 +23,19 @@ const useStyles = makeStyles((theme) => ({
 	},
 	conNavBreak:{
 	   alignItems: 'center',
-	   padding: '10px',
-	   [theme.breakpoints.down("sm")]: {
-        paddingTop:'3%'
-    },
+	   padding: '16px 0%',
 	},
     nav:{
       color:'white',
       boxShodow:'none',
       width: '100%',
+      zIndex:'10',
       backgroundColor:'black',
 	    animationName: '$scroll',
       animationDuration: '.4s',
+      [theme.breakpoints.down("sm")]: {
+        position:'fixed',
+      },
     },
 	'@keyframes scroll':{
 		'0%' :{
@@ -55,8 +56,9 @@ const useStyles = makeStyles((theme) => ({
       padding:'5px',
 	    top:'0%',
 	    animationName: '$scrollNav',
-      animationDuration: '.4s',
-	  [theme.breakpoints.down("sm")]: {
+      animationDuration: '.3s',
+      
+      [theme.breakpoints.down("sm")]: {
         padding:'3% 1%',
       },
     },
@@ -85,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection:'column',
 		    display:'flex',
 		    listStyle:'none',
-		    position:'absolute',
+		    position:'fixed',
 		    left:'0',
 		    top: '-14px',
 		    textAlign:'center',
@@ -207,7 +209,7 @@ const useStyles = makeStyles((theme) => ({
   },
   iconClose:{
     position: 'absolute',
-    right: '18.5%',
+    right: '7.5%',
   },
     listItem:{
       cursor:'pointer',
@@ -221,7 +223,7 @@ const useStyles = makeStyles((theme) => ({
       },
 	  [theme.breakpoints.down("sm")]: {
         marginBottom: '2%',
-		    width: '90%',
+		    width: '96%',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',

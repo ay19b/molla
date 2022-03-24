@@ -1,4 +1,3 @@
-
 import { makeStyles} from '@material-ui/core'
 
 
@@ -6,6 +5,8 @@ import { makeStyles} from '@material-ui/core'
 const useStyles = makeStyles((theme) => ({
 	footer:{
 		backgroundColor: 'black',
+		maxWidth: '1280px',
+        margin: 'auto',
 	},
     icons:{
 		display: 'flex',

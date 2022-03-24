@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
 		height:'100vh',
 		padding:'4% 0',
 		margin:'6rem 0% 5rem 0%',
+		
 	},
 	slide:{
 		display: 'flex',

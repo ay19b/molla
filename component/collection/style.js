@@ -6,6 +6,8 @@ import { makeStyles} from '@material-ui/core'
 const useStyles = makeStyles((theme) => ({
 	collection:{
 		backgroundColor: 'black',
+        maxWidth: '1280px',
+        margin: 'auto',
 	},
     allColl:{
        padding:'2% 0% 0% 0%',

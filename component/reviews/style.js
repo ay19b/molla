@@ -12,6 +12,8 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor:"white",
 		textAlign:'center',
 	    padding:'4% 0',
+		maxWidth: '1280px',
+        margin: 'auto',
 	},
 	slide:{
 		display: 'flex',

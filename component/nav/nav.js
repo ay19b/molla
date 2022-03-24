@@ -47,16 +47,23 @@ const Nav=({basket})=> {
   }
   
   const changeBackground=()=>{
+   
     if(window.scrollY>=100){
-      setNavbar(true)
-    }else{
-      setNavbar(false)
-    }
+      if(window.innerWidth >900){
+        setNavbar(true)
+      }else{
+        setNavbar(false)
+      }
+     }else{
+        setNavbar(false)
+     }
+  
   }
 
 useEffect(() => {
   changeBackground()
   window.addEventListener('scroll',changeBackground)  
+  
 })
     return (
       

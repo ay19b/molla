@@ -10,6 +10,8 @@ const useStyles = makeStyles((theme) => ({
       backgroundPosition: 'center',
       backgroundSize:'cover',
       height:'100vh',
+      maxWidth: '1280px',
+      margin: 'auto',
     },
     box:{
       position: "absolute",

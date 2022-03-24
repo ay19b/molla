@@ -7,6 +7,8 @@ const useStyles = makeStyles((theme) => ({
 	sectionFeature:{
 		backgroundColor:'#f1f1f1',
 		height:'100%',
+        maxWidth: '1280px',
+        margin: 'auto',
 	},
     feature:{
         backgroundImage: "url(../images/bg-1.png)",
