@@ -13,7 +13,8 @@ import NextLink from 'next/link'
 import Head from 'next/head'
 import Footer from '../component/footer/footer'
 import Nav from '../component/nav/nav'
-
+import {ThemeProvider,responsiveFontSizes} from '@material-ui/core';
+import { theme } from '../utils/theme';
 
 
 
@@ -147,6 +148,8 @@ const useStyles = makeStyles((theme) => ({
 		width:'100%',
 	},
 }));
+
+let Theme = responsiveFontSizes(theme);
 const Cart =()=>{
 	const classes = useStyles();
 	let totalAmount = useSelector(selectTotalAmount);
@@ -199,6 +202,7 @@ const Cart =()=>{
   if(cartProducts.length==0){
       return(
 	  <section>
+	  <ThemeProvider theme={Theme}>  
 	   <Nav basket='true'/>
 	   
 	   <div className={classes.headerCart}>
@@ -230,12 +234,14 @@ const Cart =()=>{
 		</div>
 		
 		<Footer />
+		</ThemeProvider> 
 		</section>
       )
     }
 	
     return(
-      <section >
+      <section>
+		<ThemeProvider theme={Theme}>  
 	   <Nav />
 	   <div className={classes.headerCart}>
 	    <Typography variant="h3" style={{color:'black'}}>Shopping Cart</Typography>
@@ -365,7 +371,7 @@ const Cart =()=>{
         />
 	   
 	   <Footer />
-	   
+	   </ThemeProvider> 
 	  </section>
     )
 }
