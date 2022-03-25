@@ -241,7 +241,7 @@ const Cart =()=>{
 	
     return(
       <section>
-		<ThemeProvider theme={Theme}>  
+		
 	   <Nav />
 	   <div className={classes.headerCart}>
 	    <Typography variant="h3" style={{color:'black'}}>Shopping Cart</Typography>
@@ -369,8 +369,8 @@ const Cart =()=>{
           message="Product Removed from Cart"
           key={vertical + horizontal}
         />
-	   
-	   <Footer />
+	   <ThemeProvider theme={Theme}>  
+	    <Footer />
 	   </ThemeProvider> 
 	  </section>
     )
