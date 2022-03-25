@@ -33,8 +33,7 @@ a {
 	height: 100vh;
 }
 .awssld__bullets{
-	bottom: 10rem !important;
-	z-index:3;
+	display:none !important;
 }
 .awssld__bullets button{
 	background: #d9d8d8 !important;
@@ -60,23 +59,12 @@ a {
 .MuiButton-text {
   padding: 10px 12px !important;
 }
-@media only screen and (min-width: 1200px) {
-  .awssld__bullets{
-	bottom: 20% !important;
-}
-}
+
 @media only screen and (max-width: 600px) {
   .awssld {
     width: 90% !important;
     margin: auto !important;
 	  height:100vh !important;
   }
-  .awssld__bullets{
-    bottom: 11.3rem !important;
-  }
 }
-@media only screen and (max-width: 360px) {
-  .awssld__bullets{
-    bottom: 13rem !important;
-}
-}
+

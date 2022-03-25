@@ -52,25 +52,26 @@ const Products =()=>{
 	   <AwesomeSlider>
          {Data.map((item)=>{
 			    
-                const{id,img,price,hdr} = item;
-                return(
-                  <div key={id} className={classes.slide}>
+          const{id,img,price,hdr,color} = item;
+             return(
+              <div key={id} className={classes.slide}>
                      <Image src={img} className={classes.img} width='300' height='350' loading="eager"/>
-                     <div className={classes.disc}>
+                <div className={classes.disc}>
                        
-					   <div className={classes.infProd}>
-					     <Typography style={{color:'#9a9a9a'}} >Lorem ipsum dolor sit amet, consectetue elit. Donec odio. Quisque volutpat mattis eros. </Typography>
-					     <Typography variant="h5" color='primary' style={{fontWeight:'bold',width: '100%'}}>${price}</Typography>
-						 <Button variant="contained" color='primary' className={classes.btnAdd} startIcon={<HiOutlineShoppingCart />} onClick={handleClick(item,{vertical: 'top',horizontal: 'right',})}>add to card</Button>
-					   </div>
-                     </div>
-                  </div>
+					        <div className={classes.infProd}>
+                   <Typography variant="h5"  style={{fontWeight:'bold',width: '100%'}}>{hdr}</Typography>
+					         <Typography style={{color:'#9a9a9a'}} >Lorem ipsum dolor sit amet, consectetue elit. Donec odio. Quisque volutpat mattis eros. </Typography>
+					         <Typography variant="h5" color='primary' style={{fontWeight:'bold',width: '100%'}}>${price}</Typography>
+						       <Button variant="contained" color='primary' className={classes.btnAdd} startIcon={<HiOutlineShoppingCart />} onClick={handleClick(item,{vertical: 'top',horizontal: 'right',})}>add to card</Button>
+					        </div>
+                </div>
+              </div>
                 )
           })}
        </AwesomeSlider>
 	   <Snackbar
            anchorOrigin={{ vertical, horizontal }}
-		   autoHideDuration={1000}
+		       autoHideDuration={1000}
            open={open}
            onClose={handleClose}
            message="Product added to Cart"
