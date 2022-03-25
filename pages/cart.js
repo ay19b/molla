@@ -25,7 +25,10 @@ const useStyles = makeStyles((theme) => ({
 		backgroundRepeat: "no-repeat",
         backgroundPosition: 'center',
         backgroundSize:'cover',
-		backgroundImage:"url(../images/headerCart.jpg)"
+		backgroundImage:"url(../images/headerCart.jpg)",
+		[theme.breakpoints.down('sm')]:{
+			padding: '6rem 3% 3rem 3%',
+		}
 	},
 	linkPages:{
 		display:'flex',
@@ -71,6 +74,10 @@ const useStyles = makeStyles((theme) => ({
 	}, 
 	header:{
 		marginLeft: '7%',
+		[theme.breakpoints.down('xs')]:{
+			fontSize: '1.4rem',
+			marginLeft:'0%',
+		}
 	},
 	quantity:{
 		display: 'flex',
@@ -127,6 +134,7 @@ const useStyles = makeStyles((theme) => ({
          position: 'absolute',
          top: '1%',
          right: '1%',
+		 fontSize: '1.5rem',
         },
 	},
     emptyCart:{
@@ -265,9 +273,7 @@ const Cart =()=>{
 
 			 <Grid container item md={9} xs={12} sm={12} direction="column">
 	    {product.filter((prod)=>prod.added).map((prod)=>{
-			if(prod.quantity==0){
-                dispatch(remove(prod))
-            } 
+			
 			const totProd=prod.quantity * prod.price;
 			
 			
@@ -294,7 +300,7 @@ const Cart =()=>{
 			   </Grid>
 			   <Grid item md={2} sm={3} className={classes.item}>
 			      <div className={classes.quantity}>
-			      <Button onClick={() => dispatch(decrementProduct(prod))}>-</Button>
+			      <Button disabled={prod.quantity==1} onClick={() => dispatch(decrementProduct(prod))}>-</Button>
 				 
 				    <TextField
                       id="outlined-size-small"
@@ -302,11 +308,11 @@ const Cart =()=>{
                       size="small"
 					  value={prod.quantity}
                     />
-                  <Button onClick={() => dispatch(incrementProduct(prod))}>+</Button>
+                  <Button disabled={prod.quantity==10} onClick={() => dispatch(incrementProduct(prod))}>+</Button>
 				  </div>
 			   </Grid>
 			   <Grid item md={2} sm={2} className={classes.item} direction="row" justifyContent="flex-start" alignItems="center">
-			     <Typography color='primary'>${totProd}</Typography>
+			     <Typography color='primary'>${totProd.toFixed(2)}</Typography>
 				 <MdOutlineClose onClick={handleClick(prod,{vertical: 'top',horizontal: 'right',})} className={classes.closeIcon}/>
 			   </Grid>
 			   
@@ -339,7 +345,7 @@ const Cart =()=>{
                </RadioGroup>
              </FormControl>
 			 <Divider />
-			 <Typography variant="h6" className={classes.subtotal}>Total: <span>${total}</span> </Typography>
+			 <Typography variant="h6" className={classes.subtotal}>Total: <span>${total.toFixed(2)}</span> </Typography>
 			 <Button className={classes.btn}>PROCEED TO CHECKED</Button>
 			 </Card>
 			 </Grid>

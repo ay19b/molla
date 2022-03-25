@@ -16,7 +16,7 @@ import {selectTotalAmount} from "../../features/variableSlice"
 import InfCard from '../modal/ModalCart'
 import classNames from 'classnames';
 import useStyles from './style';
-
+import NextLink from 'next/link'
 
 
 const Nav=({basket})=> {
@@ -65,14 +65,18 @@ useEffect(() => {
   window.addEventListener('scroll',changeBackground)  
   
 })
+
     return (
       
         <navbar  className={!navbar?classes.nav:classes.navActive} >
          <Container  className={!basket?classes.container:null}>
           <Grid container className={navbar?classes.conNav:classes.conNavBreak}>
           <Grid item xs={6} md={2} className={classes.logo}>
+          
              <CgMenu className={classes.menu} onClick={toggleLinks} size={25}/>
+             <NextLink href="/" passHref>
                <Image src={Logo} />
+            </NextLink>
           </Grid> 
           <Grid item xs={0} md={7}>
             <ul className={showLinks?classes.list:classNames(classes.list, classes.active)} >
